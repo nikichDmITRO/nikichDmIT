@@ -38,7 +38,7 @@ const Home: NextPage = () => {
         <div className={styles.contactflex}>
           <img src="/1.jpg" alt="" />
           <div className={styles.flDiv}>
-            <h2>Никита Дмитраченко [nikichDmIT]</h2>
+            <h2>Никита Дмитраченко [nikichDmIT] Хлопец</h2>
             <h3>JavaScript Developer</h3>
             <h4>HTML, CSS, JavaScript, React, Redux, Git, NEXT, MERN</h4>
           </div>
