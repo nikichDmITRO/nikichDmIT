@@ -34,17 +34,27 @@ export const socials = [
 const Home: NextPage = () => {
   return (
     <div className={styles.main}>
-      <div className={styles.container}>
-        <div className={styles.contactflex}>
-          <img src="/1.jpg" alt="" />
-          <div className={styles.flDiv}>
-            <h2>Никита Дмитраченко [nikichDmIT] ХлопецАйти</h2>
-            <h3>JavaScript Developer111</h3>
-            <h4>HTML, CSS, JavaScript, React, Redux, Git, NEXT, MERN</h4>
-          </div>
-          <img className={styles.logo} src="dquzqtpc.png" alt="" />
+      <div className={styles.header}>
+        <div className={styles.flDiv}>
+          <h2>Никита Дмитраченко [nikichDmIT] </h2>
+          <h3>JavaScript Developer</h3>
+          <h4>HTML, CSS, JavaScript, React, Redux, Git, NEXT, MERN</h4>
         </div>
+        <img className={styles.logo} src="dquzqtpc.png" alt="" />
+        <ul>
+          {socials &&
+            socials.map(({ id, icon, path }: any) => (
+              <li key={id}>
+                <a href={path} target="_blank" rel="noopener noreferrer">
+                  {icon}
+                </a>
+              </li>
+            ))}
+        </ul>
+      </div>
 
+      <div className={styles.mainFlex}>
+        <img src="/1.jpg" alt="" />
         <p>
           Хорошие знания в <span>HTML,CSS</span>(грид, фдекс,адаптива). [Верстал
           макеты , лендинги]. Базовое понимание и знание основных концепций
@@ -65,17 +75,6 @@ const Home: NextPage = () => {
           отрасль хочется самореализовываться. Очень много идей и мыслей на этот
           счет. Спасибо за потраченное время для ознакомления с моей личностью.
         </p>
-
-        <ul>
-          {socials &&
-            socials.map(({ id, icon, path }: any) => (
-              <li key={id}>
-                <a href={path} target="_blank" rel="noopener noreferrer">
-                  {icon}
-                </a>
-              </li>
-            ))}
-        </ul>
       </div>
     </div>
   );
