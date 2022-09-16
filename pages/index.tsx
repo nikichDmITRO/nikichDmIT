@@ -40,6 +40,7 @@ const Home: NextPage = () => {
           <h3>JavaScript Developer</h3>
           <h4>HTML, CSS, JavaScript, React, Redux, Git, NEXT, MERN</h4>
         </div>
+        <div className={styles.fexImg}>
         <img className={styles.logo} src="dquzqtpc.png" alt="" />
         <ul>
           {socials &&
@@ -51,6 +52,8 @@ const Home: NextPage = () => {
               </li>
             ))}
         </ul>
+        </div>
+       
       </div>
 
       <div className={styles.mainFlex}>
